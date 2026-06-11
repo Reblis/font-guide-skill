@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dandré · Font Guide</title>
+<meta name="description" content="Dandré typography guide — Sofia Sans Condensed and Inter: faces, weights and styles, type scale, pairings, and glyph specimens.">
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal:      #3CB3C4;
+    --teal-dark: #1C4046;
+    --cream:     #FFF9F0;
+    --line:      #E8DFCE;
+    --muted:     #7A8A8D;
+
+    --paper: #FFFFFF;
+    --page:  #FAF6EE;
+    --ink:   #1C4046;
+    --slate: #4E6468;
+    --rule:  #E3DCCB;
+    --rule-2:#F0EBDD;
+
+    --display: 'Sofia Sans Condensed', sans-serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--page); color: var(--ink);
+    font-family: var(--sans); font-size: 15px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  .page { max-width: 1240px; margin: 0 auto; padding: 0 24px 120px; }
+  @media (min-width: 760px)  { .page { padding: 0 40px 120px; } }
+  @media (min-width: 1200px) { .page { padding: 0 25px 120px; } }
+
+  /* ============ HEADER ============ */
+  .header-bar {
+    width: 100vw; margin-left: calc(50% - 50vw);
+    padding: 60px 24px 76px;
+    background: var(--teal-dark);
+    background-image: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 62%, #102A2F 100%);
+    color: #fff; position: relative; overflow: hidden;
+  }
+  .header-bar::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 5px; background: var(--line);
+  }
+  .header-bar .inner { max-width: 1240px; margin: 0 auto; padding: 0 24px; position: relative; }
+  .header-bar .kicker {
+    font-weight: 700; font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 14px;
+  }
+  .header-bar .wordmark {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(2.6rem, 1.8rem + 3.5vw, 4rem);
+    color: #fff; line-height: 1.15; margin: 0 0 20px;
+  }
+  .chip-row { display: flex; gap: 10px; margin-bottom: 26px; }
+  .font-chip {
+    width: 52px; height: 52px; border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.35);
+    display: grid; place-items: center;
+    color: #fff; font-size: 24px; background: rgba(255,255,255,0.08);
+  }
+  .header-bar p.lede {
+    font-weight: 400; font-size: 17px; line-height: 1.55;
+    color: rgba(255,255,255,0.88); max-width: 770px; margin: 0 0 24px;
+  }
+  .header-bar .meta { font-size: 12px; letter-spacing: 0.06em; color: rgba(255,255,255,0.6); text-transform: uppercase; }
+  .header-bar .meta span { color: rgba(255,255,255,0.95); }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,252,245,0.96);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 56px;
+  }
+  .nav-inner {
+    max-width: 1240px; margin: 0 auto; padding: 14px 24px;
+    display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center;
+  }
+  .nav-brand { font-weight: 700; font-size: 13px; color: var(--teal-dark); margin-right: auto; }
+  .nav-brand .pf { color: var(--teal); }
+  .nav a {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--slate); text-decoration: none; font-weight: 600;
+    padding: 4px 0; border-bottom: 2px solid transparent;
+    transition: color .15s, border-color .15s;
+  }
+  .nav a:hover { color: var(--teal-dark); border-bottom-color: var(--teal); }
+
+  /* ============ SECTION ============ */
+  section { margin-bottom: 96px; }
+  section > h2 {
+    font-weight: 700; font-size: 12px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--teal); margin: 0 0 8px;
+  }
+  section > h2 + .section-title {
+    font-family: var(--display); font-weight: 900;
+    font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+    line-height: 1.05; letter-spacing: 0.01em;
+    color: var(--teal-dark); margin: 0 0 12px;
+  }
+  section > .section-blurb { color: var(--slate); font-size: 15px; max-width: 720px; margin: 0 0 32px; }
+
+  /* ============ FACES ============ */
+  .face-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .face { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  .face .aa {
+    font-size: 150px; line-height: 1; padding: 28px 24px 18px;
+    color: var(--teal-dark); border-bottom: 1px solid var(--rule-2);
+  }
+  .face-meta { padding: 16px 20px; }
+  .face-meta .name { font-weight: 700; font-size: 16px; }
+  .face-meta .role { color: var(--teal); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; margin: 4px 0 8px; font-weight: 700; }
+  .face-meta .spec { font-family: var(--mono); font-size: 11px; color: var(--slate); line-height: 1.8; }
+
+  /* ============ STYLE RAMPS ============ */
+  .ramp-grid { display: grid; gap: 16px; }
+  .ramp { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--paper); }
+  .ramp .ramp-name {
+    padding: 10px 14px; font-weight: 700; font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+    border-bottom: 1px solid var(--rule);
+  }
+  .st-row {
+    display: grid; grid-template-columns: 170px 1fr;
+    gap: 20px; align-items: baseline;
+    padding: 14px 18px; border-bottom: 1px solid var(--rule-2);
+  }
+  .st-row:last-child { border-bottom: 0; }
+  .st-label { font-size: 12px; font-weight: 600; color: var(--slate); }
+  .st-label .st-meta { display: block; font-family: var(--mono); font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .st-sample { font-size: 30px; line-height: 1.2; color: var(--teal-dark); overflow-wrap: anywhere; }
+  .ramp:last-child .st-sample { font-size: 17px; line-height: 1.55; }
+
+  /* ============ TYPE SCALE ============ */
+  .scale { display: grid; gap: 6px; }
+  .scale-row { display: grid; grid-template-columns: 110px 1fr 70px; align-items: center; gap: 12px; font-size: 12px; }
+  .scale-row .name { color: var(--muted); }
+  .scale-row .bar { height: 14px; border-radius: 2px; background: var(--teal); }
+  .scale-row .px { font-family: var(--mono); color: var(--slate); text-align: right; }
+
+  /* ============ PAIRINGS ============ */
+  .gradient-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .pair-card {
+    background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
+    padding: 26px 26px 22px;
+  }
+  .pair-head { font-size: 34px; line-height: 1.05; color: var(--teal-dark); margin-bottom: 12px; position: relative; }
+  .pair-body { font-size: 14px; line-height: 1.6; color: var(--slate); }
+  .g-label {
+    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--slate); margin-top: 12px; text-align: center;
+  }
+
+  /* ============ GLYPHS ============ */
+  .glyphs { padding: 20px 22px; font-size: 26px; line-height: 1.7; color: var(--teal-dark); overflow-wrap: anywhere; letter-spacing: 0.02em; }
+
+  /* ============ CALLOUT ============ */
+  .callout {
+    border-left: 4px solid var(--teal);
+    background: #E7F5F7;
+    padding: 20px 24px; border-radius: 0 6px 6px 0;
+    color: var(--teal-dark); font-size: 14px; line-height: 1.55; margin-top: 32px;
+  }
+  .callout code { font-family: var(--mono); background: rgba(60,179,196,0.15); padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+
+  footer {
+    padding: 40px 15px 32px; border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: 13px;
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
+  }
+  footer .stamp { font-family: var(--mono); font-size: 11px; letter-spacing: 0.04em; }
+
+  @media (max-width: 760px) {
+    .st-row { grid-template-columns: 1fr; gap: 4px; }
+    .face .aa { font-size: 100px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header-bar">
+  <div class="inner">
+    <div class="kicker">Font Guide · 2026 Edition</div>
+    <div class="wordmark">Dandré</div>
+    <div class="chip-row">
+      <div class="font-chip" style="font-family:var(--display); font-weight:900;">Aa</div>
+      <div class="font-chip" style="font-family:var(--display); font-weight:800; font-style:italic;">Aa</div>
+      <div class="font-chip" style="font-family:var(--sans); font-weight:500;">Aa</div>
+    </div>
+    <p class="lede">The Dandré type system — Sofia Sans Condensed brings the bold, tall energy of a Colombian menu board in three weights with true italics; Inter keeps descriptions, prices, and UI quietly legible. Two faces, 9 styles, one kitchen.</p>
+    <p class="meta">Families <span>2</span> &nbsp;·&nbsp; Styles <span>9</span> &nbsp;·&nbsp; Source <span>Google Fonts</span></p>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <span class="nav-brand"><span class="pf">Dandré</span> · Font Guide</span>
+    <a href="#faces">Faces</a>
+    <a href="#styles">Weights &amp; Styles</a>
+    <a href="#scale">Type Scale</a>
+    <a href="#pairings">Pairings</a>
+    <a href="#glyphs">Glyphs</a>
+  </div>
+</nav>
+
+<div class="page">
+
+<section id="faces">
+  <h2>01 · Faces</h2>
+  <div class="section-title">Two Typefaces</div>
+  <p class="section-blurb">A loud one and a quiet one. Sofia Sans Condensed is the voice of headlines and menu items; Inter handles everything meant to be read at small sizes.</p>
+  <div class="face-grid">
+    <div class="face">
+      <div class="aa" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:900;">Aa</div>
+      <div class="face-meta">
+        <div class="name">Sofia Sans Condensed</div>
+        <div class="role">Condensed Display Sans</div>
+        <div class="spec">Display / Headings / Menu Items<br>Weights 700 · 800 · 900 · 6 styles · roman + italic</div>
+      </div>
+    </div>
+    <div class="face">
+      <div class="aa" style="font-family:'Inter', sans-serif; font-weight:600;">Aa</div>
+      <div class="face-meta">
+        <div class="name">Inter</div>
+        <div class="role">Neutral Grotesque Sans</div>
+        <div class="spec">Body / UI / Captions<br>Weights 400 · 500 · 600 · 3 styles · roman only</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="styles">
+  <h2>02 · Weights &amp; Styles</h2>
+  <div class="section-title">Every Loaded Style</div>
+  <p class="section-blurb">All 9 styles shipped by the Google Fonts request — nothing here is faux-bolded or browser-slanted. If a weight isn't on this list, don't use it.</p>
+  <div class="ramp-grid">
+    <div class="ramp">
+      <div class="ramp-name">Sofia Sans Condensed</div>
+      <div class="st-row">
+        <div class="st-label">Bold<span class="st-meta">700</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:700;">Bandeja Paisa Tradicional</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">Bold Italic<span class="st-meta">700 italic</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:700; font-style:italic;">Bandeja Paisa Tradicional</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">ExtraBold<span class="st-meta">800</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:800;">Bandeja Paisa Tradicional</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">ExtraBold Italic<span class="st-meta">800 italic</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:800; font-style:italic;">Bandeja Paisa Tradicional</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">Black<span class="st-meta">900</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:900;">Bandeja Paisa Tradicional</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">Black Italic<span class="st-meta">900 italic</span></div>
+        <div class="st-sample" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:900; font-style:italic;">Bandeja Paisa Tradicional</div>
+      </div>
+    </div>
+    <div class="ramp">
+      <div class="ramp-name">Inter</div>
+      <div class="st-row">
+        <div class="st-label">Regular<span class="st-meta">400</span></div>
+        <div class="st-sample" style="font-family:'Inter', sans-serif; font-weight:400;">Frijoles, chicharrón, arroz, huevo frito, aguacate y arepa.</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">Medium<span class="st-meta">500</span></div>
+        <div class="st-sample" style="font-family:'Inter', sans-serif; font-weight:500;">Frijoles, chicharrón, arroz, huevo frito, aguacate y arepa.</div>
+      </div>
+      <div class="st-row">
+        <div class="st-label">SemiBold<span class="st-meta">600</span></div>
+        <div class="st-sample" style="font-family:'Inter', sans-serif; font-weight:600;">Frijoles, chicharrón, arroz, huevo frito, aguacate y arepa.</div>
+      </div>
+    </div>
+  </div>
+  <div class="callout">
+    <strong>Load exactly what you use.</strong> The canonical request is <code>family=Sofia+Sans+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&amp;family=Inter:wght@400;500;600</code>. Adding unused weights costs page speed; using unlisted weights triggers faux rendering.
+  </div>
+</section>
+
+<section id="scale">
+  <h2>03 · Type Scale</h2>
+  <div class="section-title">Sizes</div>
+  <p class="section-blurb">Display sizes belong to Sofia Sans Condensed; 18px and below belongs to Inter. The crossover point is deliberate — condensed faces lose legibility exactly where Inter excels.</p>
+  <div class="scale">
+    <div class="scale-row"><span class="name">Display XL</span><span class="bar" style="width:84%; background:#102A2F;"></span><span class="px">64 px · Sofia</span></div>
+    <div class="scale-row"><span class="name">Display</span><span class="bar" style="width:62%; background:var(--teal-dark);"></span><span class="px">44 px · Sofia</span></div>
+    <div class="scale-row"><span class="name">H1</span><span class="bar" style="width:48%; background:#2A7A87;"></span><span class="px">34 px · Sofia</span></div>
+    <div class="scale-row"><span class="name">H2 / Menu item</span><span class="bar" style="width:36%; background:var(--teal);"></span><span class="px">26 px · Sofia</span></div>
+    <div class="scale-row"><span class="name">Body LG</span><span class="bar" style="width:24%; background:#7BCAD5;"></span><span class="px">18 px · Inter</span></div>
+    <div class="scale-row"><span class="name">Body</span><span class="bar" style="width:18%; background:#A6DBE2;"></span><span class="px">15 px · Inter</span></div>
+    <div class="scale-row"><span class="name">Caption / Price</span><span class="bar" style="width:12%; background:#CDEAEE;"></span><span class="px">13 px · Inter</span></div>
+  </div>
+</section>
+
+<section id="pairings">
+  <h2>04 · Pairings</h2>
+  <div class="section-title">Every Combination</div>
+  <p class="section-blurb">All four headline × body combinations. The canonical pair leads; the same-family pairs show what to reach for when only one face is available.</p>
+  <div class="gradient-grid">
+    <div class="g-item">
+      <div class="pair-card">
+        <div class="pair-head" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:800;">Sabor de la casa</div>
+        <div class="pair-body" style="font-family:'Inter', sans-serif;">Cocina colombiana hecha con amor — desayunos, almuerzos y bebidas servidos todos los días desde las 7 a.m.</div>
+      </div>
+      <div class="g-label">Sofia × Inter · <span style="color:#3CB3C4; font-weight:700;">Canonical</span></div>
+    </div>
+    <div class="g-item">
+      <div class="pair-card">
+        <div class="pair-head" style="font-family:'Inter', sans-serif; font-weight:600;">Sabor de la casa</div>
+        <div class="pair-body" style="font-family:'Sofia Sans Condensed', sans-serif;">Cocina colombiana hecha con amor — desayunos, almuerzos y bebidas servidos todos los días desde las 7 a.m.</div>
+      </div>
+      <div class="g-label">Inter × Sofia</div>
+    </div>
+    <div class="g-item">
+      <div class="pair-card">
+        <div class="pair-head" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:800;">Sabor de la casa</div>
+        <div class="pair-body" style="font-family:'Sofia Sans Condensed', sans-serif;">Cocina colombiana hecha con amor — desayunos, almuerzos y bebidas servidos todos los días desde las 7 a.m.</div>
+      </div>
+      <div class="g-label">Sofia × Sofia</div>
+    </div>
+    <div class="g-item">
+      <div class="pair-card">
+        <div class="pair-head" style="font-family:'Inter', sans-serif; font-weight:600;">Sabor de la casa</div>
+        <div class="pair-body" style="font-family:'Inter', sans-serif;">Cocina colombiana hecha con amor — desayunos, almuerzos y bebidas servidos todos los días desde las 7 a.m.</div>
+      </div>
+      <div class="g-label">Inter × Inter</div>
+    </div>
+  </div>
+</section>
+
+<section id="glyphs">
+  <h2>05 · Glyphs</h2>
+  <div class="section-title">Character Set</div>
+  <p class="section-blurb">Both faces carry full Latin coverage with Spanish diacritics — every tilde, every inverted mark. Set Spanish copy without substitutions.</p>
+  <div class="ramp-grid">
+    <div class="ramp">
+      <div class="ramp-name">Sofia Sans Condensed</div>
+      <div class="glyphs" style="font-family:'Sofia Sans Condensed', sans-serif; font-weight:700;">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 ÁÉÍÓÚÑ áéíóúñ ¿¡ $ % &amp; @ # · — “”</div>
+    </div>
+    <div class="ramp">
+      <div class="ramp-name">Inter</div>
+      <div class="glyphs" style="font-family:'Inter', sans-serif; font-weight:400;">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 ÁÉÍÓÚÑ áéíóúñ ¿¡ $ % &amp; @ # · — “”</div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<footer>
+  <div><strong style="color: var(--teal-dark);">Dandré</strong> · Font Guide · 2026 Edition</div>
+  <div class="stamp">2 families · 9 styles · 4 pairings</div>
+</footer>
+
+</body>
+</html>
