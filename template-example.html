@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --teal:      #3CB3C4;
@@ -59,9 +59,11 @@
     text-transform: uppercase; color: rgba(255,255,255,0.75); margin-bottom: 14px;
   }
   .header-bar .wordmark {
-    font-family: 'Pacifico', cursive;
+    /* wordmark in the brand's own H1 face: Sofia 900, tight and tall */
+    font-family: var(--display);
+    font-weight: 900;
     font-size: clamp(2.6rem, 1.8rem + 3.5vw, 4rem);
-    color: #fff; line-height: 1.15; margin: 0 0 20px;
+    color: #fff; line-height: 1; letter-spacing: -0.01em; margin: 0 0 20px;
   }
   .chip-row { display: flex; gap: 10px; margin-bottom: 26px; }
   .font-chip {
