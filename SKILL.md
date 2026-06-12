@@ -41,7 +41,10 @@ it is the exact layout, CSS architecture, and component set to reproduce.
 4. **Only loaded styles.** Show exactly the weights/italics the Google Fonts request
    ships — never demonstrate a weight that would faux-render. Include a callout with the
    canonical `family=...` request string.
-5. **Output location:** default `font-guide.html` in the relevant project folder. Never
+5. **No header glow.** Never add a `::before` radial-gradient glow blob (e.g.
+   `radial-gradient(circle, rgba(...), transparent 68%)`) to the header band — on any
+   guide, for any brand. The header is a flat color or linear gradient only.
+6. **Output location:** default `font-guide.html` in the relevant project folder. Never
    stream the HTML into chat.
 
 ## Scraping fonts from a URL
