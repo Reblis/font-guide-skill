@@ -33,9 +33,11 @@ it is the exact layout, CSS architecture, and component set to reproduce.
    (scrape them when given a URL; pick a tasteful dark neutral pair when given only font
    names), thin accent rule (`::after`), a row of **"Aa" font chips** — one per loaded
    style group — kicker ("Font Guide · <year> Edition"), brand mark in the title slot
-   (sanitized inline SVG if the brand has one; otherwise the **Pacifico wordmark
-   fallback**, white), lede (weight 400, max-width 770px), uppercase meta line with
-   family/style counts.
+   (sanitized inline SVG if the brand has one; otherwise a **wordmark set in the
+   project's own H1/display font** — the heaviest loaded weight, white, with the site's
+   H1 letter-spacing. Never substitute an off-brand face: the Pacifico wordmark in
+   `template-example.html` is Dandré's brand script, not a generic fallback), lede
+   (weight 400, max-width 770px), uppercase meta line with family/style counts.
 4. **Only loaded styles.** Show exactly the weights/italics the Google Fonts request
    ships — never demonstrate a weight that would faux-render. Include a callout with the
    canonical `family=...` request string.
