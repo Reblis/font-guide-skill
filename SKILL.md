@@ -66,7 +66,9 @@ Monospace), role, and a monospace spec line (weights · style count · roman/ita
 `02 · Weights & Styles` — one ramp card per family (analog of palette shade ramps): a row
 per loaded style — label (Regular / Bold Italic…), monospace meta (weight number +
 italic flag), and a real sample sentence rendered in that exact style. Display families
-sample large (~30px); body families sample at text size (~17px).
+sample large (~30px); body families sample at text size (~17px). **Rows are vertically
+centered** — the label/sample grid uses `align-items: center`, never `baseline`, so the
+small label sits centered against the tall sample.
 
 `03 · Type Scale` — scale-bar rows (the style-guide pattern): each size names which
 family owns it. Call out the display/body crossover point explicitly.
