@@ -54,6 +54,9 @@ it is the exact layout, CSS architecture, and component set to reproduce.
 - Map roles from usage: which family styles headings vs body vs code (`font-family`
   declarations on h1/body/pre or CSS custom properties like `--display` / `--sans`).
 - Grab brand colors (CSS custom properties) to theme the guide authentically.
+- Grab the site's card `border-radius` into a single `--radius` token and drive every
+  card off it (`border-radius: var(--radius)`; leave pills/circles). Flat brands
+  (Stratomation, 0) render sharp; rounded brands keep their curve. Don't assume a value.
 - Sample copy: pull real phrases from the site (menu items, taglines) so specimens feel
   native, in the site's language.
 

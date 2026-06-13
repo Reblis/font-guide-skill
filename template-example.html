@@ -23,6 +23,7 @@
     --slate: #4E6468;
     --rule:  #E3DCCB;
     --rule-2:#F0EBDD;
+    --radius: 8px;   /* scraped from the site's card border-radius; 0 = flat brand */
 
     --display: 'Sofia Sans Condensed', sans-serif;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
@@ -67,7 +68,7 @@
   }
   .chip-row { display: flex; gap: 10px; margin-bottom: 26px; }
   .font-chip {
-    width: 52px; height: 52px; border-radius: 10px;
+    width: 52px; height: 52px; border-radius: var(--radius);
     border: 2px solid rgba(255,255,255,0.35);
     display: grid; place-items: center;
     color: #fff; font-size: 24px; background: rgba(255,255,255,0.08);
@@ -117,7 +118,7 @@
 
   /* ============ FACES ============ */
   .face-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-  .face { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+  .face { background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; }
   .face .aa {
     font-size: 150px; line-height: 1; padding: 28px 24px 18px;
     color: var(--teal-dark); border-bottom: 1px solid var(--rule-2);
@@ -129,7 +130,7 @@
 
   /* ============ STYLE RAMPS ============ */
   .ramp-grid { display: grid; gap: 16px; }
-  .ramp { border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: var(--paper); }
+  .ramp { border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; background: var(--paper); }
   .ramp .ramp-name {
     padding: 10px 14px; font-weight: 700; font-size: 11px;
     letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
@@ -156,7 +157,7 @@
   /* ============ PAIRINGS ============ */
   .gradient-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
   .pair-card {
-    background: var(--paper); border: 1px solid var(--rule); border-radius: 8px;
+    background: var(--paper); border: 1px solid var(--rule); border-radius: var(--radius);
     padding: 26px 26px 22px;
   }
   .pair-head { font-size: 34px; line-height: 1.05; color: var(--teal-dark); margin-bottom: 12px; position: relative; }
@@ -173,10 +174,10 @@
   .callout {
     border-left: 4px solid var(--teal);
     background: #E7F5F7;
-    padding: 20px 24px; border-radius: 0 6px 6px 0;
+    padding: 20px 24px; border-radius: 0 var(--radius) var(--radius) 0;
     color: var(--teal-dark); font-size: 14px; line-height: 1.55; margin-top: 32px;
   }
-  .callout code { font-family: var(--mono); background: rgba(60,179,196,0.15); padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+  .callout code { font-family: var(--mono); background: rgba(60,179,196,0.15); padding: 2px 6px; border-radius: calc(var(--radius) / 2); font-size: 12px; }
 
   footer {
     padding: 40px 15px 32px; border-top: 1px solid var(--rule);
